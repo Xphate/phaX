@@ -1,6 +1,6 @@
 from Tkinter import *
 
-def layer4(labelframe,Protocol,TypeCode,SourcePort,DestPort,L4Flag,SeqNum,Acknum):
+def layer4(labelframe,Protocol,TypeCode,SourcePort,DestPort,L4Flag,SeqNum,Acknum,GenerateSegment):
     Radiobutton(labelframe,
             text="TCP",
             padx = 17,
@@ -50,4 +50,4 @@ def layer4(labelframe,Protocol,TypeCode,SourcePort,DestPort,L4Flag,SeqNum,Acknum
         justify=CENTER).grid(row=6,ipadx=16)
     Entry(labelframe,
       textvariable=Acknum).grid(row=6,column=1,columnspan=2,sticky=W)
-    button=Button(labelframe,text="confirm").grid(columnspan=3)
+    button=Button(labelframe,text="confirm",command=GenerateSegment).grid(columnspan=3)

@@ -1,6 +1,6 @@
 from Tkinter import *
 
-def layer3(labelframe,v,TypeofService,Identification,Flag,Flagoff,TTL,SourceIp,DestinationIp):
+def layer3(labelframe,v,TypeofService,Identification,Flag,Flagoff,TTL,SourceIp,DestinationIp,GeneratePkt):
     Radiobutton(labelframe,
             text="arp",
             padx = 20,
@@ -43,4 +43,4 @@ def layer3(labelframe,v,TypeofService,Identification,Flag,Flagoff,TTL,SourceIp,D
     Label(labelframe,text="destination ip").grid(row=8,column=0,sticky=W)
     Entry(labelframe,
       textvariable=DestinationIp).grid(row=9,columnspan=2,ipadx=46)
-    button=Button(labelframe,text="confirm").grid(columnspan=2)
+    button=Button(labelframe,text="confirm",command=GeneratePkt).grid(columnspan=2)
