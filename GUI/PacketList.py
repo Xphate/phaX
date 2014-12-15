@@ -45,14 +45,17 @@ def packetlist(labelframe,
         textlist.append(text4)
     Button(labelframe,
            text="Delete",
-           command=deletepacketlist).grid(row=2,column=5,sticky=NW,ipadx=6)
+           command=deletepacketlist,
+           fg='red').grid(row=2,column=5,sticky=NW,ipadx=6)
     Button(labelframe,
            text="Previous",
-           command=previouspacketlist).grid(row=4,column=5,sticky=NW)
+           command=previouspacketlist,
+           fg='red').grid(row=4,column=5,sticky=NW)
     Button(labelframe,
            text="Next",
-           command=nextpacketlist).grid(row=6,column=5,sticky=NW,ipadx=10)
+           command=nextpacketlist,
+           fg='red').grid(row=6,column=5,sticky=NW,ipadx=10)
     Button(labelframe,
            text="View",
-           command=viewpacketlist).grid(row=8,column=5,sticky=NW,ipadx=10)
+           command=viewpacketlist,fg='red').grid(row=8,column=5,sticky=NW,ipadx=10)
     return textlist

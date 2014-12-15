@@ -174,7 +174,7 @@ def Generate():
     if c=="input something....\n" or c=="Packets have been sended...\n":
         if a==1:
             full=frame/arppkt
-        elif a==2:
+        elif a==2 and b!=1 and b!=2 and b!=3:
             full=frame/ippkt
         elif a==2 and b==1:
             full=frame/ippkt/tcpseg
@@ -187,7 +187,7 @@ def Generate():
     else:
         if a==1:
             full=frame/arppkt/c
-        elif a==2:
+        elif a==2 and b!=1 and b!=2 and b!=3:
             full=frame/ippkt/c
         elif a==2 and b==1:
             full=frame/ippkt/tcpseg/c
@@ -210,6 +210,8 @@ def Generate():
         text5.insert(END,'\n')
         i=i+1
     f_handler.close()
+    f=open('/lib/log.txt','w')
+    sys.stdout=f
     viewpacketlist()
     return
 

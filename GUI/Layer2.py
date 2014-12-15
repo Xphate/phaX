@@ -10,4 +10,7 @@ def layer2(labelframe,macda,macsa,ethertype,GenerateEther):
     label3 = Message(labelframe, text="Ether  Type",relief=RAISED )   #third input item
     label3.grid(row=2,column=0,sticky=W,ipadx=5)
     text3=Entry(labelframe,textvariable=ethertype).grid(row=2,column=1)
-    button=Button(labelframe,text="confirm",command=GenerateEther).grid(columnspan=2)    #button of layer2
+    button=Button(labelframe,
+                  text="confirm",
+                  command=GenerateEther,
+                  fg='red').grid(columnspan=2)    #button of layer2

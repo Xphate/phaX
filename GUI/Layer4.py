@@ -44,4 +44,4 @@ def layer4(labelframe,Protocol,TypeCode,SourcePort,DestPort,L4Flag,SeqNum,Genera
         justify=CENTER).grid(row=5,ipadx=16)
     Entry(labelframe,
       textvariable=SeqNum).grid(row=5,column=1,columnspan=2,sticky=W)
-    button=Button(labelframe,text="confirm",command=GenerateSegment).grid(columnspan=3)
+    button=Button(labelframe,text="confirm",command=GenerateSegment,fg='red').grid(columnspan=3)
